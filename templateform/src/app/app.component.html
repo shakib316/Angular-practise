@@ -6,7 +6,7 @@
  
   <div>
     <label>Name: </label>
-    <input type="text" [(ngModel)]="firstname" required placeholder="Enter Name" name="firstname">  
+    <input type="text" [(ngModel)]="firstname"  placeholder="Enter Name" name="firstname">  
   
   </div>
   <br/>
@@ -17,12 +17,12 @@
   <br/>
   <div>
     <label>Enter Description: </label>
-    <input type="text" [(ngModel)]="description" placeholder="Description" name="description">
+    <textarea [(ngModel)]="description" placeholder="Description" name="description"></textarea>
   </div>
   <br/>
   <div>
     
-    <input type="checkbox" [(ngModel)]="terms" name="terms"> Terms and conditions
+    <input type="checkbox" [(ngModel)]="terms" required name="terms"> Terms and conditions
   </div>
   <hr/>
   <div>
@@ -30,5 +30,5 @@
     <button type="reset" >Reset</button>
     <button type="button" (click)=loadvalues()  >Default  </button>
   </div>
- <h1>{{firstname}}</h1>
+ 
 </form>
