@@ -20,4 +20,12 @@ export class AppComponent {
   
   }
 
+  loadvalues(){
+    
+    this.firstname="farooq"
+    this.email="farooq@sk.com"
+    this.description="Default description"
+    this.terms = true
+  }
+
 }

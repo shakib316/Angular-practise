@@ -1,17 +1,18 @@
 <h1>Template Static Form</h1>
 
+<hr/>
 
 <form #templateform="ngForm" (submit)="adduser(templateform)" >
  
   <div>
     <label>Name: </label>
-    <input type="text" [(ngModel)]="firstname" placeholder="Enter Name" name="firstname">  
+    <input type="text" [(ngModel)]="firstname" required placeholder="Enter Name" name="firstname">  
   
   </div>
   <br/>
   <div>
     <label>Email address: </label>
-    <input type="email" [(ngModel)]="email" placeholder="Enter Email" name="email">
+    <input type="email" [(ngModel)]="email"  placeholder="Enter Email" name="email">
   </div>
   <br/>
   <div>
@@ -23,8 +24,11 @@
     
     <input type="checkbox" [(ngModel)]="terms" name="terms"> Terms and conditions
   </div>
+  <hr/>
   <div>
-    <button type="submit">Submit</button>
+    <button type="submit" [disabled]="!templateform.valid" >Submit</button>
+    <button type="reset" >Reset</button>
+    <button type="button" (click)=loadvalues()  >Default  </button>
   </div>
- 
+ <h1>{{firstname}}</h1>
 </form>
